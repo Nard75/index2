@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Understanding Web Applications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: #4b79a1;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .intro {
+            background-image: url('images/ai-background.jpg'); /* ✅ Fixed */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #4b79a1;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #eee;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>How Web Applications Work</h1>
+        <p>An educational look at web apps and their connection to databases</p>
+    </header>
+
+    <!-- Background Image Section -->
+    <section class="intro">
+        <div class="overlay">
+            <h2>What is a Web Application?</h2>
+            <p>Web applications are interactive programs that run in a web browser and rely on a back-end server to store and process data. These apps allow users to access services online, such as email platforms, social media sites, or e-commerce portals.</p>
+        </div>
+    </section>
+
+    <!-- Database Interaction Section -->
+    <section>
+        <h2>How Web Apps Use Databases</h2>
+        <p>Most web applications interact with back-end databases to store, retrieve, and manage data. This is typically done through APIs or server-side scripts that handle data queries. These databases enable persistent storage of user profiles, content, and transaction logs.</p>
+        <a href="images/client-server-diagram.png" target="_blank">
+            <img src="images/client-server-diagram.png" alt="Client-server database diagram" />
+        </a>
+        <button onclick="revealInfo()">Click to learn more</button>
+        <p id="extraInfo" style="display:none;">Web servers use languages like PHP, Node.js, or Python to connect to databases like MySQL or MongoDB. SQL queries are often used to retrieve, update, and delete information from these databases securely.</p>
+    </section>
+
+    <!-- Intranet vs Internet Use Cases Section -->
+    <section>
+        <h2>Intranet vs. Internet Use Cases</h2>
+        <p>Businesses use web applications for both internal and external needs:</p>
+        <ul>
+            <li><strong>Intranet:</strong> Internal employee portals, HR dashboards, document repositories, and training platforms.</li>
+            <li><strong>Internet:</strong> E-commerce stores, booking engines, public-facing websites, and customer support portals.</li>
+        </ul>
+        <a href="images/intranet-vs-internet.png" target="_blank">
+            <img src="images/intranet-vs-internet.png" alt="Intranet vs Internet Use Cases" />
+        </a>
+    </section>
+
+    <footer>
+        <p>Created by Bernard Latimore | Educational Web Project</p>
+    </footer>
+
+    <script>
+        // Reveal extra database interaction info on button click
+        function revealInfo() {
+            const info = document.getElementById('extraInfo');
+            info.style.display = info.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
